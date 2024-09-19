@@ -1,5 +1,7 @@
 # Prisma + Koa + MySQL + TypeScript + Eslint 模板
 
+[English](https://github.com/Bayn-Web/prisma_template/blob/main/Readme.en.md)
+
 本模板提供了使用 Prisma、Koa、MySQL、TypeScript 和 Eslint 构建项目的快速入门指南。
 
 ## 快速开始
@@ -12,14 +14,6 @@
 
 - 运行 `npx prisma init` 来创建 `prisma/schema.prisma` 文件和 `.env` 文件。
 - 在 `.env` 文件中填写数据库 URL。
-```
-DATABASE_URL=database_type://username:password@IP:port/database_name
-```
-
-#### Example:
-```
-DATABASE_URL=mysql://root:123456@localhost:3306/test
-```
 
 ### 3. 创建或迁移数据库
 
