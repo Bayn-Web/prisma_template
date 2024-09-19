@@ -12,6 +12,14 @@
 
 - 运行 `npx prisma init` 来创建 `prisma/schema.prisma` 文件和 `.env` 文件。
 - 在 `.env` 文件中填写数据库 URL。
+```
+DATABASE_URL=database_type://username:password@IP:port/database_name
+```
+
+#### Example:
+```
+DATABASE_URL=mysql://root:123456@localhost:3306/test
+```
 
 ### 3. 创建或迁移数据库
 
