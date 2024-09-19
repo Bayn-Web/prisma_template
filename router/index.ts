@@ -6,6 +6,7 @@ const prisma = new PrismaClient();
 const router = new Router();
 
 generateRestfulAPIs(router, prisma, "user");
+generateRestfulAPIs(router, prisma, "like");
 
 // 创建用户资料
 router.post('/profile', async (ctx) => {

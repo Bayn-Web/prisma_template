@@ -44,12 +44,21 @@ export const generateRestfulAPIs = (router: Router, prisma: PrismaClient, modelN
   // POST /modelName
   router.post(`/${modelName}`, async (ctx) => {
     try {
+      const bodyJson = ctx.request.body as Record<string, string | number>;
+      for (const key of Object.keys(bodyJson)) {
+        if (!Number.isNaN(Number.parseInt(bodyJson[key] as string))) {
+          bodyJson[key] = Number.parseInt(bodyJson[key] as string);
+        }
+      }
       const data = await (model as unknown as AllCapable).create({ data: ctx.request.body });
       ctx.status = 201;
       ctx.body = formatDateTime(data, ctx.headers.timezone as TimeZone);
-    } catch {
+    } catch (e) {
       ctx.status = 400;
-      ctx.body = { error: "Check if something is already in use." };
+      ctx.body = {
+        error: "Check if something is already in use.",
+        detail: e
+      };
     }
   });
 

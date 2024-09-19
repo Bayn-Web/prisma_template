@@ -1,6 +1,7 @@
 # Prisma + Koa + MySQL + TypeScript + Eslint Template
 
 [中文](https://github.com/Bayn-Web/prisma_template/blob/main/Readme.md)
+
 This template provides a quick start guide for building projects using Prisma, Koa, MySQL, TypeScript, and Eslint.
 
 ## Quick Start

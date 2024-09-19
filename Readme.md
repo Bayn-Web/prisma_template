@@ -17,8 +17,8 @@
 
 ### 3. 创建或迁移数据库
 
-- 如果你需要从零开始创建数据库结构，运行 `npx prisma db push`。
-- 如果你已经有数据在数据库中，并希望保留现有数据的同时更新数据库结构，运行 `npx prisma migrate dev --name initial`。
+- 如果你需要从零开始创建数据库结构，运行 `npx prisma db push --schema ./prisma/schema`。
+- 如果你已经有数据在数据库中，并希望保留现有数据的同时更新数据库结构，运行 `npx prisma migrate dev`。
 
 ### 4. 启动服务
 
